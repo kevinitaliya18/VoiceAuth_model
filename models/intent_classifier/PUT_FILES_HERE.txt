@@ -1,0 +1,6 @@
+Copy from Google Drive: VoiceAuth_Project/models/intent_classifier/
+  intent_model.py
+  head.npz
+  intent_config.json
+  encoder/             (folder, optional - offline copy of the sentence encoder)
+(test_intent_local.py is already here)

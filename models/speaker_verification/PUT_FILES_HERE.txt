@@ -1,0 +1,5 @@
+Copy from Google Drive: VoiceAuth_Project/models/speaker_verification/
+  speaker_model.py
+  speaker_config.json
+  wavlm_sv/            (folder, optional - offline copy of the pretrained model)
+(test_speaker_local.py is already here)

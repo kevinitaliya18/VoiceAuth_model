@@ -1,0 +1,4 @@
+Copy from Google Drive: VoiceAuth_Project/models/spoof_detector/
+  spoof_model.py
+  spoof_detector_final.pt
+(test_local.py is already here: python test_local.py my_call.wav)
