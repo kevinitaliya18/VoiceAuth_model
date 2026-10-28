@@ -1,0 +1,7 @@
+audio,voiceprint,transcript,language,expected_level,request_type,transaction_amount,new_beneficiary,call_origin,flagged_number,after_hours,caller_trusted,claimed_role
+test_audio\01_normal_talk.wav,alice,,en,LOW,none,,false,known_contact,false,false,true,colleague
+test_audio\02_ceo_fraud_clone.wav,alice,,en,HIGH,fund_transfer,500000,true,voip,false,true,false,ceo
+test_audio\03_vishing_otp_scam.wav,,,en,HIGH,otp_disclosure,,false,unknown,true,false,false,bank_employee
+test_audio\04_complex_family_emergency.wav,,,en,HIGH,fund_transfer,50000,true,unknown,false,true,false,family
+test_audio\05_complex_harmless_ai_notice.wav,,,en,MEDIUM,none,,false,known_contact,false,false,false,bank_employee
+test_audio\06_complex_noisy_mismatch.wav,alice,,en,HIGH,fund_transfer,200000,true,unknown,false,false,false,colleague

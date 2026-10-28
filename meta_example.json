@@ -1,0 +1,7 @@
+{
+  "request_type": "fund_transfer",
+  "transaction_amount": 400000,
+  "new_beneficiary": true,
+  "call_origin": "unknown",
+  "claimed_role": "ceo"
+}

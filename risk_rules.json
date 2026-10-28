@@ -1,0 +1,115 @@
+{
+  "evidence_weights": {
+    "voice_fake": 0.9,
+    "identity_mismatch": 0.7,
+    "manipulation": 0.7,
+    "sensitive_ask": 0.5,
+    "pressure": 0.3
+  },
+  "evidence_floor": 0.2,
+  "speaker_sharpness": 25,
+  "sensitive_ask_flags": [
+    "asks_otp_password",
+    "asks_money_transfer",
+    "asks_personal_documents",
+    "asks_remote_access_or_link"
+  ],
+  "pressure_flags": [
+    "urgency_pressure",
+    "threat_fear",
+    "secrecy_request"
+  ],
+  "context": {
+    "new_beneficiary": 0.25,
+    "amount_tiers": [
+      [
+        1000000,
+        0.3
+      ],
+      [
+        100000,
+        0.2
+      ],
+      [
+        25000,
+        0.1
+      ]
+    ],
+    "origin_weights": {
+      "unknown": 0.1,
+      "withheld": 0.15,
+      "international": 0.15,
+      "voip": 0.1,
+      "known_contact": 0.0
+    },
+    "flagged_number": 0.3,
+    "request_weights": {
+      "fund_transfer": 0.2,
+      "privileged_access": 0.25,
+      "otp_disclosure": 0.3,
+      "info_request": 0.1,
+      "none": 0.0
+    },
+    "after_hours": 0.05
+  },
+  "context_direct_weight": 0.25,
+  "request_stakes": {
+    "fund_transfer": 0.8,
+    "privileged_access": 0.9,
+    "otp_disclosure": 0.9,
+    "info_request": 0.4,
+    "none": 0.1,
+    "unknown": 0.3
+  },
+  "amount_stakes": [
+    [
+      1000000,
+      1.0
+    ],
+    [
+      100000,
+      0.7
+    ],
+    [
+      25000,
+      0.4
+    ]
+  ],
+  "thresholds": {
+    "medium": 0.4,
+    "high": 0.7,
+    "stakes_shift": 0.2,
+    "min_medium": 0.18,
+    "min_high": 0.45
+  },
+  "trusted_discount": 0.7,
+  "corroboration_cap": {
+    "enabled": true,
+    "strong_min": 0.6,
+    "stakes_below": 0.5
+  },
+  "hard_rules": {
+    "fake_voice_sensitive_request": {
+      "enabled": true,
+      "voice_fake_min": 0.85
+    },
+    "credential_phishing": {
+      "enabled": true,
+      "otp_flag_min": 0.8,
+      "manipulation_min": 0.6
+    },
+    "identity_mismatch_sensitive": {
+      "enabled": true,
+      "mismatch_min": 0.8
+    },
+    "unverifiable_high_value": {
+      "enabled": true,
+      "stakes_min": 0.7
+    }
+  },
+  "sensitive_request_types": [
+    "fund_transfer",
+    "privileged_access",
+    "otp_disclosure"
+  ]
+}

@@ -1,0 +1,14 @@
+# Copy these values into config.yaml of the tool-deepfake-testing repo (keep its other keys).
+adapter: http
+send_format: original            # also try: wav16k, mp3
+
+thresholds:
+  spoof_threshold: 0.5           # matches Model 1 (p_spoof = 0.5 at its calibrated threshold)
+  similarity_threshold: 0.86     # REPLACE with "threshold" from models/speaker_verification/speaker_config.json
+
+http:
+  url: "http://127.0.0.1:8000/harness/analyze"
+  api_key_env: "VISHING_API_KEY"   # set the same value in BOTH terminals (API and harness) - or leave unset for local-only use
+  timeout: 120.0                   # the harness default of 10 s is too short: the first call loads the models
+  retries: 2
+  payload_format: "multipart"      # or "json" (base64 audio); the bridge accepts both

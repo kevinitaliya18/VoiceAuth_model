@@ -1,0 +1,147 @@
+{
+  "api_key_env": "VISHING_API_KEY",
+  "include_extras": true,
+  "include_debug": false,
+  "flags_format": "list",
+  "request_fields": {
+    "audio_json": [
+      "audio_base64",
+      "audio_b64",
+      "audio_data",
+      "audio",
+      "data",
+      "file"
+    ],
+    "audio_multipart": [
+      "audio",
+      "file",
+      "audio_file",
+      "upload",
+      "data"
+    ],
+    "context": [
+      "context",
+      "metadata",
+      "meta"
+    ],
+    "voiceprint": [
+      "speaker_id",
+      "claimed_speaker",
+      "claimed_identity",
+      "enrolled_id",
+      "enrolled_speaker",
+      "voiceprint",
+      "identity",
+      "user_id"
+    ],
+    "transcript": [
+      "transcript",
+      "text"
+    ],
+    "language": [
+      "language",
+      "lang"
+    ],
+    "format": [
+      "format",
+      "audio_format",
+      "ext",
+      "extension"
+    ]
+  },
+  "default_voiceprint": null,
+  "output_names": {
+    "p_spoof": "p_spoof",
+    "similarity": "similarity",
+    "manipulation_score": "manipulation_score",
+    "flags": "flags",
+    "action": "action",
+    "is_spoof": "is_spoof",
+    "is_match": "is_match",
+    "risk_level": "risk_level",
+    "risk_score": "risk_score",
+    "reasons": "reasons",
+    "recommendations": "recommendations",
+    "transcript": "transcript",
+    "escalate_to_supervisor": "escalate_to_supervisor"
+  },
+  "core_fields": [
+    "p_spoof",
+    "similarity",
+    "manipulation_score",
+    "flags",
+    "action"
+  ],
+  "action_map": {
+    "allow": "allow",
+    "warn_and_verify": "warn",
+    "force_verification": "force_mfa_callback"
+  },
+  "flag_name_map": {},
+  "missing_values": {
+    "p_spoof": null,
+    "similarity": null,
+    "manipulation_score": null
+  },
+  "context_map": {
+    "transaction_amount": "transaction_amount",
+    "amount": "transaction_amount",
+    "amount_inr": "transaction_amount",
+    "txn_amount": "transaction_amount",
+    "value": "transaction_amount",
+    "new_beneficiary": "new_beneficiary",
+    "new_payee": "new_beneficiary",
+    "is_new_beneficiary": "new_beneficiary",
+    "beneficiary_new": "new_beneficiary",
+    "call_origin": "call_origin",
+    "origin": "call_origin",
+    "caller_origin": "call_origin",
+    "request_type": "request_type",
+    "request": "request_type",
+    "requested_action": "request_type",
+    "action_requested": "request_type",
+    "flagged_number": "flagged_number",
+    "number_flagged": "flagged_number",
+    "known_fraud_number": "flagged_number",
+    "reported_number": "flagged_number",
+    "after_hours": "after_hours",
+    "off_hours": "after_hours",
+    "caller_trusted": "caller_trusted",
+    "trusted_caller": "caller_trusted",
+    "known_contact": "caller_trusted",
+    "claimed_role": "claimed_role",
+    "role": "claimed_role"
+  },
+  "value_map": {
+    "request_type": {
+      "transfer": "fund_transfer",
+      "payment": "fund_transfer",
+      "wire": "fund_transfer",
+      "fund_transfer": "fund_transfer",
+      "otp": "otp_disclosure",
+      "password": "otp_disclosure",
+      "pin": "otp_disclosure",
+      "otp_disclosure": "otp_disclosure",
+      "privileged_access": "privileged_access",
+      "admin_access": "privileged_access",
+      "access": "privileged_access",
+      "info": "info_request",
+      "info_request": "info_request",
+      "none": "none"
+    },
+    "call_origin": {
+      "known": "known_contact",
+      "known_contact": "known_contact",
+      "trusted": "known_contact",
+      "contact": "known_contact",
+      "unknown": "unknown",
+      "withheld": "withheld",
+      "private": "withheld",
+      "hidden": "withheld",
+      "international": "international",
+      "foreign": "international",
+      "voip": "voip",
+      "internet": "voip"
+    }
+  }
+}
