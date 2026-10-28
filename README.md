@@ -1,4 +1,4 @@
-# VoiceAuth_Local - voice cloning / vishing detection (local setup)
+# VoiceAuth_model - voice cloning / vishing detection (local setup)
 
 One call goes through 3 models and a rule-based risk engine:
 
